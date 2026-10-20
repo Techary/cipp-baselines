@@ -1,0 +1,383 @@
+{
+  "TemplateType": "BaselineTemplate",
+  "templateName": "Teams",
+  "description": "",
+  "assignedTenants": [
+    {
+      "label": "Exported Template",
+      "value": "Exported Template",
+      "type": "Tenant"
+    }
+  ],
+  "excludedTenants": [],
+  "alertEmails": "",
+  "alertWebhookUrl": "",
+  "disableAlerts": false,
+  "stages": [
+    {
+      "name": "Report",
+      "logic": "and",
+      "conditions": [],
+      "standards": [
+        {
+          "standard": "PlannerBlockTaskDelete",
+          "instance": "PlannerBlockTaskDelete",
+          "variables": {},
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsAppPermissionPolicy",
+          "instance": "TeamsAppPermissionPolicy",
+          "variables": {
+            "DefaultCatalogAppsType": "BlockedAppList",
+            "GlobalCatalogAppsType": "AllowedAppList",
+            "PrivateCatalogAppsType": "AllowedAppList"
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsBlockTrialTenants",
+          "instance": "TeamsBlockTrialTenants",
+          "variables": {
+            "state": "Blocked"
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsChatProtection",
+          "instance": "TeamsChatProtection",
+          "variables": {
+            "FileTypeCheck": "Enabled",
+            "UrlReputationCheck": "Enabled"
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsDisableResourceAccounts",
+          "instance": "TeamsDisableResourceAccounts",
+          "variables": {},
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsEmailIntegration",
+          "instance": "TeamsEmailIntegration",
+          "variables": {
+            "AllowEmailIntoChannel": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsExternalAccessPolicy",
+          "instance": "TeamsExternalAccessPolicy",
+          "variables": {
+            "EnableFederationAccess": true,
+            "EnableTeamsConsumerAccess": false,
+            "EnableTeamsConsumerInbound": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsExternalChatWithAnyone",
+          "instance": "TeamsExternalChatWithAnyone",
+          "variables": {
+            "UseB2BInvitesToAddExternalUsers": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsExternalFileSharing",
+          "instance": "TeamsExternalFileSharing",
+          "variables": {
+            "AllowGoogleDrive": false,
+            "AllowShareFile": false,
+            "AllowBox": false,
+            "AllowDropBox": false,
+            "AllowEgnyte": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsFederationConfiguration",
+          "instance": "TeamsFederationConfiguration",
+          "variables": {
+            "DomainControl": "BlockSpecificExternal",
+            "DomainList": "",
+            "AllowTeamsConsumer": false,
+            "AllowTeamsConsumerInbound": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsFilesPolicy",
+          "instance": "TeamsFilesPolicy",
+          "variables": {
+            "FileSharingInChatsWithExternalUsers": "Disabled",
+            "NativeFileEntryPoints": "",
+            "SPChannelFilesTab": ""
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsGlobalMeetingPolicy",
+          "instance": "TeamsGlobalMeetingPolicy",
+          "variables": {
+            "DesignatedPresenterRoleMode": "OrganizerOnlyUserOverride",
+            "AllowAnonymousUsersToJoinMeeting": false,
+            "AllowAnonymousUsersToStartMeeting": false,
+            "AutoAdmittedUsers": "EveryoneInCompanyExcludingGuests",
+            "AllowPSTNUsersToBypassLobby": false,
+            "MeetingChatEnabledType": "EnabledExceptAnonymous",
+            "AllowParticipantGiveRequestControl": false,
+            "AllowExternalParticipantGiveRequestControl": false,
+            "AllowExternalNonTrustedMeetingChat": false,
+            "AllowCloudRecording": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsGuestAccess",
+          "instance": "TeamsGuestAccess",
+          "variables": {
+            "AllowGuestUser": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsMeetingVerification",
+          "instance": "TeamsMeetingVerification",
+          "variables": {
+            "CaptchaVerificationForMeetingJoin": "AnonymousUsersAndUntrustedOrganizations"
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsMessagingPolicy",
+          "instance": "TeamsMessagingPolicy",
+          "variables": {
+            "AllowOwnerDeleteMessage": false,
+            "AllowUserDeleteMessage": true,
+            "AllowUserEditMessage": true,
+            "AllowUserDeleteChat": true,
+            "ReadReceiptsEnabledType": "UserPreference",
+            "CreateCustomEmojis": false,
+            "DeleteCustomEmojis": false,
+            "AllowSecurityEndUserReporting": true,
+            "AllowCommunicationComplianceEndUserReporting": true,
+            "AutoShareFilesInExternalChats": ""
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        }
+      ]
+    },
+    {
+      "name": "Enforce",
+      "logic": "and",
+      "conditions": [
+        {
+          "type": "group",
+          "unit": "days",
+          "group": "7704b988-e957-4f91-9435-e57fc35217c0",
+          "groupName": "Baseline enforcement"
+        }
+      ],
+      "standards": [
+        {
+          "standard": "PlannerBlockTaskDelete",
+          "instance": "PlannerBlockTaskDelete",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsAppPermissionPolicy",
+          "instance": "TeamsAppPermissionPolicy",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsBlockTrialTenants",
+          "instance": "TeamsBlockTrialTenants",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsChatProtection",
+          "instance": "TeamsChatProtection",
+          "variables": {
+            "FileTypeCheck": "Enabled",
+            "UrlReputationCheck": "Enabled"
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsDisableResourceAccounts",
+          "instance": "TeamsDisableResourceAccounts",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsEmailIntegration",
+          "instance": "TeamsEmailIntegration",
+          "variables": {
+            "AllowEmailIntoChannel": false
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsExternalAccessPolicy",
+          "instance": "TeamsExternalAccessPolicy",
+          "variables": {
+            "EnableFederationAccess": true,
+            "EnableTeamsConsumerAccess": false,
+            "EnableTeamsConsumerInbound": false
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsExternalChatWithAnyone",
+          "instance": "TeamsExternalChatWithAnyone",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsExternalFileSharing",
+          "instance": "TeamsExternalFileSharing",
+          "variables": {
+            "AllowGoogleDrive": false,
+            "AllowShareFile": false,
+            "AllowBox": false,
+            "AllowDropBox": false,
+            "AllowEgnyte": false
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsFederationConfiguration",
+          "instance": "TeamsFederationConfiguration",
+          "variables": {
+            "DomainControl": "BlockSpecificExternal",
+            "DomainList": "",
+            "AllowTeamsConsumer": false,
+            "AllowTeamsConsumerInbound": false
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsFilesPolicy",
+          "instance": "TeamsFilesPolicy",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsGlobalMeetingPolicy",
+          "instance": "TeamsGlobalMeetingPolicy",
+          "variables": {
+            "DesignatedPresenterRoleMode": "OrganizerOnlyUserOverride",
+            "AllowAnonymousUsersToJoinMeeting": false,
+            "AllowAnonymousUsersToStartMeeting": false,
+            "AutoAdmittedUsers": "EveryoneInCompanyExcludingGuests",
+            "AllowPSTNUsersToBypassLobby": false,
+            "MeetingChatEnabledType": "EnabledExceptAnonymous",
+            "AllowParticipantGiveRequestControl": false,
+            "AllowExternalParticipantGiveRequestControl": false,
+            "AllowExternalNonTrustedMeetingChat": false,
+            "AllowCloudRecording": false
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsGuestAccess",
+          "instance": "TeamsGuestAccess",
+          "variables": {
+            "AllowGuestUser": false
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsMeetingsByDefault",
+          "instance": "TeamsMeetingsByDefault",
+          "variables": {
+            "state": true
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsMeetingVerification",
+          "instance": "TeamsMeetingVerification",
+          "variables": {
+            "CaptchaVerificationForMeetingJoin": "AnonymousUsersAndUntrustedOrganizations"
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsMessagingPolicy",
+          "instance": "TeamsMessagingPolicy",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        }
+      ]
+    }
+  ],
+  "referencedTemplates": []
+}
