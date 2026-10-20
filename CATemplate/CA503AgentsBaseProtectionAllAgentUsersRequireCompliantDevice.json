@@ -1,0 +1,9 @@
+{
+  "PartitionKey": "CATemplate",
+  "RowKey": "9655ae05-f242-4914-944e-5de538374709",
+  "GUID": "9655ae05-f242-4914-944e-5de538374709",
+  "JSON": "{\"displayName\":\"CA503-Agents-BaseProtection-AllAgentUsers-RequireCompliantDevice\",\"state\":\"enabledForReportingButNotEnforced\",\"conditions\":{\"@odata.type\":\"#microsoft.graph.conditionalAccessConditionSet\",\"userRiskLevels\":[],\"signInRiskLevels\":[],\"clientAppTypes\":[\"all\"],\"platforms\":null,\"locations\":null,\"times\":null,\"deviceStates\":null,\"devices\":null,\"clientApplications\":null,\"applications\":{\"@odata.type\":\"#microsoft.graph.conditionalAccessApplications\",\"includeApplications\":[\"All\"],\"excludeApplications\":[],\"includeUserActions\":[],\"includeAuthenticationContextClassReferences\":[],\"applicationFilter\":null},\"users\":{\"@odata.type\":\"#microsoft.graph.conditionalAccessUsers\",\"includeUsers\":[\"None\"],\"excludeUsers\":[],\"includeGroups\":[],\"excludeGroups\":[],\"includeRoles\":[],\"excludeRoles\":[],\"includeGuestsOrExternalUsers\":null,\"excludeGuestsOrExternalUsers\":null},\"agents\":{\"@odata.type\":\"#microsoft.graph.conditionalAccessAgents\",\"includeAgentUsers\":[\"All\"],\"excludeAgentUsers\":[],\"agentFilter\":null},\"agentContext\":{\"@odata.type\":\"#microsoft.graph.conditionalAccessAgentContext\",\"includeAgentContexts\":[\"agentUserSessionsInitiatedFromEndpoints\"],\"excludeAgentContexts\":[]}},\"grantControls\":{\"@odata.type\":\"#microsoft.graph.conditionalAccessGrantControls\",\"operator\":\"OR\",\"builtInControls\":[\"compliantDevice\"],\"customAuthenticationFactors\":[],\"termsOfUse\":[],\"authenticationStrength\":null}}",
+  "Package": "ConditionalAccess",
+  "SHA": "4e5533f882340f9e9baadb5e3714fc3901e7c972",
+  "Source": "Techary/ConditionalAccessBaseline"
+}
