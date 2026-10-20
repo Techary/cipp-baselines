@@ -1,0 +1,62 @@
+{
+  "TemplateType": "BaselineTemplate",
+  "templateName": "Copilot",
+  "description": "",
+  "assignedTenants": [
+    {
+      "label": "Exported Template",
+      "value": "Exported Template",
+      "type": "Tenant"
+    }
+  ],
+  "excludedTenants": [],
+  "alertEmails": "",
+  "alertWebhookUrl": "",
+  "disableAlerts": false,
+  "stages": [
+    {
+      "name": "Report",
+      "logic": "and",
+      "conditions": [],
+      "standards": [
+        {
+          "standard": "CopilotSettings",
+          "instance": "CopilotSettings",
+          "variables": {
+            "copilotChatPinning": "1",
+            "blockAccessToOpenFiles": "0",
+            "imageGeneration": "",
+            "allowWebSearch": "2",
+            "allowInAdminCenters": ""
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        }
+      ]
+    },
+    {
+      "name": "Enforce",
+      "logic": "and",
+      "conditions": [
+        {
+          "type": "group",
+          "unit": "days",
+          "group": "7704b988-e957-4f91-9435-e57fc35217c0",
+          "groupName": "Baseline enforcement"
+        }
+      ],
+      "standards": [
+        {
+          "standard": "CopilotSettings",
+          "instance": "CopilotSettings",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        }
+      ]
+    }
+  ],
+  "referencedTemplates": []
+}
