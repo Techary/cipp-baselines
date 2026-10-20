@@ -1,9 +1,0 @@
-{
-  "PartitionKey": "CATemplate",
-  "RowKey": "66ca15a6-83db-4400-8a32-45966531b828",
-  "GUID": "66ca15a6-83db-4400-8a32-45966531b828",
-  "JSON": "{\"displayName\":\"CA502-Agents-AttackSurfaceReduction-AllAgentIdentities-AllAgentResources-BLOCK\",\"state\":\"enabledForReportingButNotEnforced\",\"conditions\":{\"@odata.type\":\"#microsoft.graph.conditionalAccessConditionSet\",\"userRiskLevels\":[],\"signInRiskLevels\":[],\"clientAppTypes\":[\"all\"],\"platforms\":null,\"locations\":null,\"times\":null,\"deviceStates\":null,\"devices\":null,\"agents\":null,\"applications\":{\"@odata.type\":\"#microsoft.graph.conditionalAccessApplications\",\"includeApplications\":[\"AllAgentIdResources\"],\"excludeApplications\":[],\"includeUserActions\":[],\"includeAuthenticationContextClassReferences\":[],\"applicationFilter\":null},\"users\":{\"@odata.type\":\"#microsoft.graph.conditionalAccessUsers\",\"includeUsers\":[\"None\"],\"excludeUsers\":[],\"includeGroups\":[],\"excludeGroups\":[],\"includeRoles\":[],\"excludeRoles\":[],\"includeGuestsOrExternalUsers\":null,\"excludeGuestsOrExternalUsers\":null},\"clientApplications\":{\"@odata.type\":\"#microsoft.graph.conditionalAccessClientApplications\",\"includeServicePrincipals\":[],\"includeAgentIdServicePrincipals\":[\"All\"],\"excludeServicePrincipals\":[]}},\"grantControls\":{\"@odata.type\":\"#microsoft.graph.conditionalAccessGrantControls\",\"operator\":\"OR\",\"builtInControls\":[\"block\"],\"customAuthenticationFactors\":[],\"termsOfUse\":[],\"authenticationStrength\":null}}",
-  "Package": "ConditionalAccess",
-  "SHA": "9d2426f0d5a6e13298d6b85a9a901b56277df569",
-  "Source": "Techary/ConditionalAccessBaseline"
-}

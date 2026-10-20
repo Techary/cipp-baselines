@@ -1,9 +1,0 @@
-{
-  "PartitionKey": "CATemplate",
-  "RowKey": "161b556c-0a84-4fa9-a838-a370c67b1dc9",
-  "GUID": "161b556c-0a84-4fa9-a838-a370c67b1dc9",
-  "JSON": "{\"displayName\":\"CA201-Internals-IdentityProtection-AnyApp-AnyPlatform-BLOCK-HighRiskUser\",\"state\":\"enabled\",\"conditions\":{\"@odata.type\":\"#microsoft.graph.conditionalAccessConditionSet\",\"userRiskLevels\":[\"high\"],\"signInRiskLevels\":[],\"clientAppTypes\":[\"all\"],\"platforms\":null,\"locations\":null,\"times\":null,\"deviceStates\":null,\"devices\":null,\"clientApplications\":null,\"agents\":null,\"applications\":{\"@odata.type\":\"#microsoft.graph.conditionalAccessApplications\",\"includeApplications\":[\"All\"],\"excludeApplications\":[],\"includeUserActions\":[],\"includeAuthenticationContextClassReferences\":[],\"applicationFilter\":null},\"users\":{\"@odata.type\":\"#microsoft.graph.conditionalAccessUsers\",\"includeUsers\":[],\"excludeUsers\":[],\"includeGroups\":[\"APP_Microsoft365_E5\"],\"excludeGroups\":[\"CA-BreakGlassAccounts - Exclude\",\"CA201-Internals-IdentityProtection-AnyApp-AnyPlatform-BLOCK-HighRiskUser - Exclude\"],\"includeRoles\":[],\"excludeRoles\":[],\"includeGuestsOrExternalUsers\":null,\"excludeGuestsOrExternalUsers\":{\"@odata.type\":\"#microsoft.graph.conditionalAccessGuestsOrExternalUsers\",\"guestOrExternalUserTypes\":\"serviceProvider\",\"externalTenants\":{\"@odata.type\":\"#microsoft.graph.conditionalAccessEnumeratedExternalTenants\",\"membershipKind\":\"enumerated\",\"members\":[\"c6c875ca-6561-4984-8444-4072baee8b7d\"]}}}},\"grantControls\":{\"@odata.type\":\"#microsoft.graph.conditionalAccessGrantControls\",\"operator\":\"OR\",\"builtInControls\":[\"block\"],\"customAuthenticationFactors\":[],\"termsOfUse\":[],\"authenticationStrength\":null}}",
-  "Package": "ConditionalAccess",
-  "SHA": "ce18f7c0a5ecf01c91bd8dd15475ceaf046ad7f4",
-  "Source": "Techary/ConditionalAccessBaseline"
-}
