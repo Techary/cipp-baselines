@@ -1,0 +1,34 @@
+{
+  "TemplateType": "BaselineTemplate",
+  "templateName": "Entra - Security Defaults",
+  "description": "",
+  "assignedTenants": [
+    {
+      "label": "Exported Template",
+      "value": "Exported Template",
+      "type": "Tenant"
+    }
+  ],
+  "excludedTenants": [],
+  "alertEmails": "",
+  "alertWebhookUrl": "",
+  "disableAlerts": false,
+  "stages": [
+    {
+      "name": "Enforce",
+      "logic": "and",
+      "conditions": [],
+      "standards": [
+        {
+          "standard": "SecurityDefaults",
+          "instance": "SecurityDefaults",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": false,
+          "alertOnRemediate": false
+        }
+      ]
+    }
+  ],
+  "referencedTemplates": []
+}
