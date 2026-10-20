@@ -1,0 +1,655 @@
+{
+  "TemplateType": "BaselineTemplate",
+  "templateName": "Exchange Online",
+  "description": "",
+  "assignedTenants": [
+    {
+      "label": "Exported Template",
+      "value": "Exported Template",
+      "type": "Tenant"
+    }
+  ],
+  "excludedTenants": [],
+  "alertEmails": "",
+  "alertWebhookUrl": "",
+  "disableAlerts": false,
+  "stages": [
+    {
+      "name": "Report",
+      "logic": "and",
+      "conditions": [],
+      "standards": [
+        {
+          "standard": "AddDKIM",
+          "instance": "AddDKIM",
+          "variables": {},
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "AddDMARCToMOERA",
+          "instance": "AddDMARCToMOERA",
+          "variables": {
+            "RecordValue": "v=DMARC1; p=reject;"
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "AutoExpandArchive",
+          "instance": "AutoExpandArchive",
+          "variables": {},
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "Bookings",
+          "instance": "Bookings",
+          "variables": {
+            "enabled": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "calDefault",
+          "instance": "calDefault",
+          "variables": {
+            "permissionLevel": "AvailabilityOnly"
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "CloudMessageRecall",
+          "instance": "CloudMessageRecall",
+          "variables": {
+            "enabled": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DelegateSentItems",
+          "instance": "DelegateSentItems",
+          "variables": {
+            "IncludeUserMailboxes": true
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableAdditionalStorageProviders",
+          "instance": "DisableAdditionalStorageProviders",
+          "variables": {
+            "storageProvidersAvailable": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableBasicAuthSMTP",
+          "instance": "DisableBasicAuthSMTP",
+          "variables": {
+            "disabled": true
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableEWS",
+          "instance": "DisableEWS",
+          "variables": {
+            "ewsEnabled": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableExchangeOnlinePowerShell",
+          "instance": "DisableExchangeOnlinePowerShell",
+          "variables": {},
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableExternalCalendarSharing",
+          "instance": "DisableExternalCalendarSharing",
+          "variables": {
+            "externalCalendarSharingEnabled": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableOutlookAddins",
+          "instance": "DisableOutlookAddins",
+          "variables": {},
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableOWAPersonalAccounts",
+          "instance": "DisableOWAPersonalAccounts",
+          "variables": {
+            "personalAccountsEnabled": false,
+            "personalAccountCalendarsEnabled": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableResourceMailbox",
+          "instance": "DisableResourceMailbox",
+          "variables": {},
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableSharedMailbox",
+          "instance": "DisableSharedMailbox",
+          "variables": {},
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableViva",
+          "instance": "DisableViva",
+          "variables": {},
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "EnableMailboxAuditing",
+          "instance": "EnableMailboxAuditing",
+          "variables": {
+            "auditDisabled": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "EnableMailTips",
+          "instance": "EnableMailTips",
+          "variables": {
+            "mailTipsEnabled": true,
+            "largeAudienceThreshold": 25
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "EnableOnlineArchiving",
+          "instance": "EnableOnlineArchiving",
+          "variables": {},
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "EXODirectSend",
+          "instance": "EXODirectSend",
+          "variables": {
+            "rejectDirectSend": true
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "EXODisableAutoForwarding",
+          "instance": "EXODisableAutoForwarding",
+          "variables": {
+            "autoForwardingMode": "Off"
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "EXOOutboundSpamLimits",
+          "instance": "EXOOutboundSpamLimits",
+          "variables": {
+            "recipientLimitExternalPerHour": 400,
+            "recipientLimitInternalPerHour": 800,
+            "recipientLimitPerDay": 800,
+            "actionWhenThresholdReached": "BlockUser"
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "FocusedInbox",
+          "instance": "FocusedInbox",
+          "variables": {
+            "enabled": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "LegacyEmailReportAddins",
+          "instance": "LegacyEmailReportAddins",
+          "variables": {},
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "MailboxDefaultAuditSet",
+          "instance": "MailboxDefaultAuditSet",
+          "variables": {},
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "MessageExpiration",
+          "instance": "MessageExpiration",
+          "variables": {
+            "messageExpiration": "12:00:00"
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "RetentionPolicyTag",
+          "instance": "RetentionPolicyTag",
+          "variables": {
+            "AgeLimitForRetention": 90
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "SafeSendersDisable",
+          "instance": "SafeSendersDisable",
+          "variables": {},
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "SendFromAlias",
+          "instance": "SendFromAlias",
+          "variables": {
+            "state": true
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "SendReceiveLimitTenant",
+          "instance": "SendReceiveLimitTenant",
+          "variables": {
+            "SendLimit": 150,
+            "ReceiveLimit": 150
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsDisableResourceAccounts",
+          "instance": "TeamsDisableResourceAccounts",
+          "variables": {},
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TwoClickEmailProtection",
+          "instance": "TwoClickEmailProtection",
+          "variables": {
+            "state": true
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        }
+      ]
+    },
+    {
+      "name": "Enforce",
+      "logic": "and",
+      "conditions": [
+        {
+          "type": "group",
+          "unit": "days",
+          "group": "7704b988-e957-4f91-9435-e57fc35217c0",
+          "groupName": "Baseline enforcement"
+        }
+      ],
+      "standards": [
+        {
+          "standard": "AddDKIM",
+          "instance": "AddDKIM",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "AddDMARCToMOERA",
+          "instance": "AddDMARCToMOERA",
+          "variables": {
+            "RecordValue": "v=DMARC1; p=reject;"
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "AutoExpandArchive",
+          "instance": "AutoExpandArchive",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "Bookings",
+          "instance": "Bookings",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "calDefault",
+          "instance": "calDefault",
+          "variables": {
+            "permissionLevel": "AvailabilityOnly"
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "CloudMessageRecall",
+          "instance": "CloudMessageRecall",
+          "variables": {
+            "enabled": false
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DelegateSentItems",
+          "instance": "DelegateSentItems",
+          "variables": {
+            "IncludeUserMailboxes": true
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableAdditionalStorageProviders",
+          "instance": "DisableAdditionalStorageProviders",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableBasicAuthSMTP",
+          "instance": "DisableBasicAuthSMTP",
+          "variables": {
+            "disabled": true
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableEWS",
+          "instance": "DisableEWS",
+          "variables": {
+            "ewsEnabled": false
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableExchangeOnlinePowerShell",
+          "instance": "DisableExchangeOnlinePowerShell",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableExternalCalendarSharing",
+          "instance": "DisableExternalCalendarSharing",
+          "variables": {
+            "externalCalendarSharingEnabled": false
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableOutlookAddins",
+          "instance": "DisableOutlookAddins",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableOWAPersonalAccounts",
+          "instance": "DisableOWAPersonalAccounts",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableResourceMailbox",
+          "instance": "DisableResourceMailbox",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableSharedMailbox",
+          "instance": "DisableSharedMailbox",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableViva",
+          "instance": "DisableViva",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "EnableMailboxAuditing",
+          "instance": "EnableMailboxAuditing",
+          "variables": {
+            "auditDisabled": false
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "EnableMailTips",
+          "instance": "EnableMailTips",
+          "variables": {
+            "mailTipsEnabled": true,
+            "largeAudienceThreshold": 25
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "EnableOnlineArchiving",
+          "instance": "EnableOnlineArchiving",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "EXODirectSend",
+          "instance": "EXODirectSend",
+          "variables": {
+            "rejectDirectSend": true
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "EXODisableAutoForwarding",
+          "instance": "EXODisableAutoForwarding",
+          "variables": {
+            "autoForwardingMode": "Off"
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "EXOOutboundSpamLimits",
+          "instance": "EXOOutboundSpamLimits",
+          "variables": {
+            "recipientLimitExternalPerHour": 400,
+            "recipientLimitInternalPerHour": 800,
+            "recipientLimitPerDay": 800,
+            "actionWhenThresholdReached": "BlockUser"
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "FocusedInbox",
+          "instance": "FocusedInbox",
+          "variables": {
+            "enabled": false
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "LegacyEmailReportAddins",
+          "instance": "LegacyEmailReportAddins",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "MailboxDefaultAuditSet",
+          "instance": "MailboxDefaultAuditSet",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "MessageExpiration",
+          "instance": "MessageExpiration",
+          "variables": {
+            "messageExpiration": "12:00:00"
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "RetentionPolicyTag",
+          "instance": "RetentionPolicyTag",
+          "variables": {
+            "AgeLimitForRetention": 90
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "SafeSendersDisable",
+          "instance": "SafeSendersDisable",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "SendFromAlias",
+          "instance": "SendFromAlias",
+          "variables": {
+            "state": true
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "SendReceiveLimitTenant",
+          "instance": "SendReceiveLimitTenant",
+          "variables": {
+            "SendLimit": 150,
+            "ReceiveLimit": 150
+          },
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsDisableResourceAccounts",
+          "instance": "TeamsDisableResourceAccounts",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TwoClickEmailProtection",
+          "instance": "TwoClickEmailProtection",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        }
+      ]
+    }
+  ],
+  "referencedTemplates": []
+}
