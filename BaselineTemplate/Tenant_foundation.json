@@ -1,0 +1,86 @@
+{
+  "TemplateType": "BaselineTemplate",
+  "templateName": "Tenant foundation",
+  "description": "",
+  "assignedTenants": [
+    {
+      "label": "Exported Template",
+      "value": "Exported Template",
+      "type": "Tenant"
+    }
+  ],
+  "excludedTenants": [],
+  "alertEmails": "",
+  "alertWebhookUrl": "",
+  "disableAlerts": false,
+  "stages": [
+    {
+      "name": "Default",
+      "logic": "and",
+      "conditions": [],
+      "standards": [
+        {
+          "standard": "AnonReportDisable",
+          "instance": "AnonReportDisable",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": false,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "AuditLog",
+          "instance": "AuditLog",
+          "variables": {
+            "enabled": false
+          },
+          "remediateEnabled": true,
+          "alertEnabled": false,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "EnableCustomerLockbox",
+          "instance": "EnableCustomerLockbox",
+          "variables": {
+            "enabled": true
+          },
+          "remediateEnabled": true,
+          "alertEnabled": false,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "EnableNamePronunciation",
+          "instance": "EnableNamePronunciation",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": false,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "EnablePronouns",
+          "instance": "EnablePronouns",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": false,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "FormsPhishingProtection",
+          "instance": "FormsPhishingProtection",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": false,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "PhishProtection",
+          "instance": "PhishProtection",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": false,
+          "alertOnRemediate": false
+        }
+      ]
+    }
+  ],
+  "referencedTemplates": []
+}
