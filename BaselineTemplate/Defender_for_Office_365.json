@@ -1,0 +1,226 @@
+{
+  "TemplateType": "BaselineTemplate",
+  "templateName": "Defender for Office 365",
+  "description": "",
+  "assignedTenants": [
+    {
+      "label": "Exported Template",
+      "value": "Exported Template",
+      "type": "Tenant"
+    }
+  ],
+  "excludedTenants": [],
+  "alertEmails": "",
+  "alertWebhookUrl": "",
+  "disableAlerts": false,
+  "stages": [
+    {
+      "name": "Report",
+      "logic": "and",
+      "conditions": [],
+      "standards": [
+        {
+          "standard": "AntiPhishPolicy",
+          "instance": "AntiPhishPolicy",
+          "variables": {
+            "name": "CIPP Default Anti-Phishing Policy",
+            "PhishThresholdLevel": "3",
+            "EnableFirstContactSafetyTips": true,
+            "EnableSimilarUsersSafetyTips": true,
+            "EnableSimilarDomainsSafetyTips": true,
+            "EnableUnusualCharactersSafetyTips": true,
+            "AuthenticationFailAction": "MoveToJmf",
+            "SpoofQuarantineTag": "DefaultFullAccessPolicy",
+            "MailboxIntelligenceProtectionAction": "Quarantine",
+            "MailboxIntelligenceQuarantineTag": "DefaultFullAccessPolicy",
+            "TargetedUserProtectionAction": "Quarantine",
+            "TargetedUserQuarantineTag": "DefaultFullAccessPolicy",
+            "TargetedDomainProtectionAction": "Quarantine",
+            "TargetedDomainQuarantineTag": "DefaultFullAccessPolicy"
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "AtpPolicyForO365",
+          "instance": "AtpPolicyForO365",
+          "variables": {
+            "AllowSafeDocsOpen": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "EmptyFilterIPAllowList",
+          "instance": "EmptyFilterIPAllowList",
+          "variables": {},
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "MalwareFilterPolicy",
+          "instance": "MalwareFilterPolicy",
+          "variables": {
+            "name": "CIPP Default Malware Policy",
+            "FileTypeAction": "Quarantine",
+            "QuarantineTag": "AdminOnlyAccessPolicy",
+            "OptionalFileTypes": "",
+            "EnableInternalSenderAdminNotifications": false,
+            "InternalSenderAdminAddress": "",
+            "EnableExternalSenderAdminNotifications": false,
+            "ExternalSenderAdminAddress": ""
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "SafeAttachmentPolicy",
+          "instance": "SafeAttachmentPolicy",
+          "variables": {
+            "name": "CIPP Default Safe Attachment Policy",
+            "SafeAttachmentAction": "Block",
+            "QuarantineTag": "AdminOnlyAccessPolicy",
+            "Redirect": false,
+            "RedirectAddress": ""
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "SafeLinksPolicy",
+          "instance": "SafeLinksPolicy",
+          "variables": {
+            "name": "CIPP Default SafeLinks Policy",
+            "AllowClickThrough": false,
+            "DisableUrlRewrite": false,
+            "EnableOrganizationBranding": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "SpamFilterPolicy",
+          "instance": "SpamFilterPolicy",
+          "variables": {
+            "name": "CIPP Default Spam Filter Policy",
+            "SpamAction": "MoveToJmf",
+            "SpamQuarantineTag": "DefaultFullAccessPolicy",
+            "HighConfidenceSpamAction": "Quarantine",
+            "HighConfidenceSpamQuarantineTag": "AdminOnlyAccessPolicy",
+            "BulkSpamAction": "MoveToJmf",
+            "BulkQuarantineTag": "DefaultFullAccessPolicy",
+            "PhishSpamAction": "Quarantine",
+            "PhishQuarantineTag": "AdminOnlyAccessPolicy",
+            "HighConfidencePhishQuarantineTag": "AdminOnlyAccessPolicy",
+            "BulkThreshold": 7,
+            "IncreaseScoreWithImageLinks": false,
+            "IncreaseScoreWithBizOrInfoUrls": false,
+            "MarkAsSpamFramesInHtml": false,
+            "MarkAsSpamObjectTagsInHtml": false,
+            "MarkAsSpamEmbedTagsInHtml": false,
+            "MarkAsSpamFormTagsInHtml": false,
+            "MarkAsSpamWebBugsInHtml": false,
+            "MarkAsSpamSensitiveWordList": false,
+            "EnableLanguageBlockList": false,
+            "EnableRegionBlockList": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsZAP",
+          "instance": "TeamsZAP",
+          "variables": {},
+          "remediateEnabled": false,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        }
+      ]
+    },
+    {
+      "name": "Enforce",
+      "logic": "and",
+      "conditions": [
+        {
+          "type": "group",
+          "group": "7704b988-e957-4f91-9435-e57fc35217c0",
+          "groupName": "Baseline enforcement"
+        }
+      ],
+      "standards": [
+        {
+          "standard": "AntiPhishPolicy",
+          "instance": "AntiPhishPolicy",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "AtpPolicyForO365",
+          "instance": "AtpPolicyForO365",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "EmptyFilterIPAllowList",
+          "instance": "EmptyFilterIPAllowList",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "MalwareFilterPolicy",
+          "instance": "MalwareFilterPolicy",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "SafeAttachmentPolicy",
+          "instance": "SafeAttachmentPolicy",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "SafeLinksPolicy",
+          "instance": "SafeLinksPolicy",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "SpamFilterPolicy",
+          "instance": "SpamFilterPolicy",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "TeamsZAP",
+          "instance": "TeamsZAP",
+          "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        }
+      ]
+    }
+  ],
+  "referencedTemplates": []
+}
