@@ -137,6 +137,16 @@
           "alertOnRemediate": false
         },
         {
+          "standard": "DisableAgentBlueprintCreation",
+          "instance": "DisableAgentBlueprintCreation",
+          "variables": {
+            "allowAgentBlueprintCreation": false
+          },
+          "remediateEnabled": false,
+          "alertEnabled": false,
+          "alertOnRemediate": false
+        },
+        {
           "standard": "DisableAppCreation",
           "instance": "DisableAppCreation",
           "variables": {
@@ -348,6 +358,7 @@
       "conditions": [
         {
           "type": "group",
+          "unit": "days",
           "group": "7704b988-e957-4f91-9435-e57fc35217c0",
           "groupName": "Baseline enforcement"
         }
@@ -461,6 +472,16 @@
           "standard": "DefaultUserPermissions",
           "instance": "DefaultUserPermissions",
           "variables": {},
+          "remediateEnabled": true,
+          "alertEnabled": true,
+          "alertOnRemediate": false
+        },
+        {
+          "standard": "DisableAgentBlueprintCreation",
+          "instance": "DisableAgentBlueprintCreation",
+          "variables": {
+            "allowAgentBlueprintCreation": false
+          },
           "remediateEnabled": true,
           "alertEnabled": true,
           "alertOnRemediate": false
